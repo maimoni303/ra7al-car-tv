@@ -54,6 +54,8 @@ jobs:
           disk-size: 4096M
           ram-size: 3072M
           script: |
+            adb shell settings put global hide_error_dialogs 1 || true
+            adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS || true
             cd android && gradle --no-daemon connectedDebugAndroidTest -Pandroid.injected.androidTest.leaveApksInstalledAfterRun=true || echo "TOUR_FAILED" > "$GITHUB_WORKSPACE/tour-failed"
             adb shell ls /sdcard/Android/data/com.ra7al.cartv/files/shots || true
             mkdir -p "$GITHUB_WORKSPACE/android-shots" && adb pull /sdcard/Android/data/com.ra7al.cartv/files/shots "$GITHUB_WORKSPACE/android-shots/" || true
