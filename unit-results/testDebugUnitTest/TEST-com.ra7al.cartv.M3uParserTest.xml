@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ra7al.cartv.M3uParserTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-18T01:35:57" hostname="ip-10-0-136-108" time="0.113">
+  <properties/>
+  <testcase name="stringsHaveBothLanguages" classname="com.ra7al.cartv.M3uParserTest" time="0.013"/>
+  <testcase name="commaInsideQuotes" classname="com.ra7al.cartv.M3uParserTest" time="0.078"/>
+  <testcase name="detectsM3u" classname="com.ra7al.cartv.M3uParserTest" time="0.001"/>
+  <testcase name="plainUrlsAndInvalidLines" classname="com.ra7al.cartv.M3uParserTest" time="0.005"/>
+  <testcase name="extendedPlaylist" classname="com.ra7al.cartv.M3uParserTest" time="0.001"/>
+  <testcase name="duplicateIdsAreUnique" classname="com.ra7al.cartv.M3uParserTest" time="0.009"/>
+  <testcase name="crlfBomExtGrp" classname="com.ra7al.cartv.M3uParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

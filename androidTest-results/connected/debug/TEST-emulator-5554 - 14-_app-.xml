@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.ra7al.cartv.ScreenTourTest" tests="2" failures="0" errors="0" skipped="0" time="55.336" timestamp="2026-11-18T01:39:25" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 14" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="tourEnglishLight" classname="com.ra7al.cartv.ScreenTourTest" time="28.117" />
+  <testcase name="tourArabicDark" classname="com.ra7al.cartv.ScreenTourTest" time="26.362" />
+</testsuite>
