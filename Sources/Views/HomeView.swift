@@ -65,6 +65,7 @@ struct HomeView: View {
                 .background(Color(.systemGray5), in: Circle())
         }
         .accessibilityLabel(L10n.t("home.sources"))
+        .accessibilityIdentifier("sourceMenu")
     }
 
     @ViewBuilder

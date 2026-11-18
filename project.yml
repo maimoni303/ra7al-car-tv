@@ -106,12 +106,26 @@ targets:
         BUNDLE_LOADER: "$(TEST_HOST)"
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/RA7ALCarTV.app/RA7ALCarTV"
 
+  RA7ALCarTVUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: RA7ALCarTV
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+        TEST_TARGET_NAME: RA7ALCarTV
+
 schemes:
   RA7ALCarTV:
     build:
       targets:
         RA7ALCarTV: all
         RA7ALCarTVTests: [test]
+        RA7ALCarTVUITests: [test]
     test:
       targets:
         - RA7ALCarTVTests
+        - RA7ALCarTVUITests

@@ -50,6 +50,7 @@ struct MiniPlayerBar: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 9)
             .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 22))
+            .accessibilityIdentifier("miniPlayer")
             .shadow(color: .black.opacity(0.1), radius: 14, y: 4)
             .contentShape(Rectangle())
             .onTapGesture(perform: onOpen)
@@ -102,6 +103,9 @@ struct ChannelCard: View {
         .frame(width: width)
         .contentShape(Rectangle())
         .onTapGesture(perform: onTap)
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityIdentifier("channel-\(channel.name)")
         .contextMenu {
             Button { store.toggleFavorite(channel) } label: {
                 Label(L10n.t(store.isFavorite(channel) ? "common.unfavorite" : "common.favorite"),

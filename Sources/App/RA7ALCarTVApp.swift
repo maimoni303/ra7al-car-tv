@@ -91,6 +91,7 @@ struct RootView: View {
             .animation(.spring(duration: 0.3), value: player.current?.id)
         }
         .environmentObject(router)
+        .task { await DemoSeed.applyIfNeeded() }
         .fullScreenCover(isPresented: $router.showPlayer) {
             PlayerScreen().environmentObject(router)
         }
@@ -137,6 +138,7 @@ struct FloatingTabBar: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(selection == tab ? .isSelected : [])
+                .accessibilityIdentifier("tab-\(tab.rawValue)")
             }
         }
         .padding(5)
