@@ -177,10 +177,35 @@ final class PlaylistStore: ObservableObject {
         guard let url = playlist.sourceURL, !playlist.isLocalFile else { return }
         let text = try await download(url)
         let channels = try parseOrThrow(text, id: playlist.id)
-        var p = playlist
+        var p = playlists.first(where: { $0.id == playlist.id }) ?? playlist
         p.channelCount = channels.count
         p.lastUpdated = Date()
+        p.lastChecked = Date()
+        p.lastError = nil
         commit(p, channels: channels)
+    }
+
+    /// Daily check: re-downloads every link source not checked in the last 24 hours,
+    /// so channels stay current and broken links are flagged before you start watching.
+    private var isCheckingSources = false
+
+    func refreshDueSources(force: Bool = false) async {
+        guard !isCheckingSources else { return }
+        isCheckingSources = true
+        defer { isCheckingSources = false }
+        let day: TimeInterval = 24 * 60 * 60
+        for p in playlists where !p.isLocalFile && p.sourceURL != nil {
+            let last = p.lastChecked ?? p.lastUpdated
+            guard force || Date().timeIntervalSince(last) >= day else { continue }
+            do {
+                try await refresh(p)
+            } catch {
+                guard let i = playlists.firstIndex(where: { $0.id == p.id }) else { continue }
+                playlists[i].lastError = error.localizedDescription
+                playlists[i].lastChecked = Date()
+                save(playlists, to: "playlists.json")
+            }
+        }
     }
 
     func rename(_ playlist: Playlist, to name: String) {

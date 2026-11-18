@@ -20,12 +20,16 @@ struct ManageSourcesView: View {
                 ForEach(store.playlists) { p in
                     NavigationLink { SourceDetailView(playlistID: p.id) } label: {
                         HStack(spacing: 18) {
-                            Image(systemName: "antenna.radiowaves.left.and.right")
-                                .font(.system(size: 26)).foregroundStyle(Brand.accent)
+                            Image(systemName: p.lastError == nil ? "antenna.radiowaves.left.and.right" : "antenna.radiowaves.left.and.right.slash")
+                                .font(.system(size: 26)).foregroundStyle(p.lastError == nil ? Brand.accent : Color.red)
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(p.name).font(.system(size: 22, weight: .medium)).foregroundStyle(.primary)
                                 Text("\(store.count(in: p).grouped) \(L10n.t("home.channels")) · \(L10n.t("sources.refreshed")) \(p.lastUpdated.relativeText())")
                                     .font(.system(size: 16)).foregroundStyle(.secondary).lineLimit(1)
+                                if p.lastError != nil {
+                                    Text(L10n.t("sources.broken")).font(.system(size: 14, weight: .medium))
+                                        .foregroundStyle(.red).lineLimit(1)
+                                }
                             }
                             Spacer()
                             Image(systemName: "chevron.forward").foregroundStyle(Color(.tertiaryLabel))
@@ -47,6 +51,7 @@ struct ManageSourcesView: View {
                     .accessibilityLabel(L10n.t("home.addSource"))
             }
         }
+        .refreshable { await store.refreshDueSources(force: true) }
     }
 }
 
@@ -71,6 +76,10 @@ struct SourceDetailView: View {
                 Section {
                     LabeledContent(L10n.t("home.channels"), value: store.count(in: p).grouped)
                     LabeledContent(L10n.t("sources.refreshed"), value: p.lastUpdated.relativeText())
+                    LabeledContent(L10n.t("sources.status")) {
+                        Text(p.lastError == nil ? L10n.t("sources.ok") : (p.lastError ?? ""))
+                            .foregroundStyle(p.lastError == nil ? Brand.accent : Color.red)
+                    }
                     if let u = p.sourceURL {
                         LabeledContent(L10n.t("sources.link")) {
                             Text(u.absoluteString).lineLimit(1).truncationMode(.middle).textSelection(.enabled)

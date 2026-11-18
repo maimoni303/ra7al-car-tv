@@ -153,7 +153,11 @@ enum L10n {
         "common.unfavorite": "Remove from favorites",
         "common.rename": "Rename",
         "common.save": "Save",
-        "common.system": "System"
+        "common.system": "System",
+        "common.back": "Back",
+        "sources.broken": "Link not working — check with your provider",
+        "sources.status": "Status",
+        "sources.ok": "Working · checked daily"
     ]
 
     static let ar: [String: String] = [
@@ -299,6 +303,10 @@ enum L10n {
         "common.unfavorite": "إزالة من المفضلة",
         "common.rename": "إعادة تسمية",
         "common.save": "حفظ",
-        "common.system": "حسب النظام"
+        "common.system": "حسب النظام",
+        "common.back": "رجوع",
+        "sources.broken": "الرابط لا يعمل — راجع مزوّد الاشتراك",
+        "sources.status": "الحالة",
+        "sources.ok": "يعمل · يُفحص يومياً"
     ]
 }

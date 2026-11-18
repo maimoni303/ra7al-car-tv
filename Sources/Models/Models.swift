@@ -26,6 +26,9 @@ struct Playlist: Identifiable, Codable, Hashable {
     var isLocalFile: Bool
     var channelCount: Int
     var lastUpdated: Date
+    /// Last daily check result: nil = link works, otherwise the error shown on the source card.
+    var lastError: String?
+    var lastChecked: Date?
 }
 
 enum PlaylistError: LocalizedError {

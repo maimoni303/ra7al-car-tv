@@ -149,7 +149,7 @@ final class BrowserStore: ObservableObject {
     }
 
     /// Turns typed text into a URL: a website if it looks like one, otherwise a Google search.
-    static func resolve(_ text: String) -> URL? {
+    nonisolated static func resolve(_ text: String) -> URL? {
         let t = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !t.isEmpty else { return nil }
         if let u = URL(string: t), let s = u.scheme, ["http", "https"].contains(s.lowercased()) { return u }

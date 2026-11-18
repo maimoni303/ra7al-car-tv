@@ -63,6 +63,7 @@ final class Router: ObservableObject {
 
 struct RootView: View {
     @EnvironmentObject var player: PlayerManager
+    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var router = Router()
 
     var body: some View {
@@ -91,7 +92,15 @@ struct RootView: View {
             .animation(.spring(duration: 0.3), value: player.current?.id)
         }
         .environmentObject(router)
-        .task { await DemoSeed.applyIfNeeded() }
+        .task {
+            await DemoSeed.applyIfNeeded()
+            if !DemoSeed.isUITest { await PlaylistStore.shared.refreshDueSources() }
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active && !DemoSeed.isUITest {
+                Task { await PlaylistStore.shared.refreshDueSources() }
+            }
+        }
         .fullScreenCover(isPresented: $router.showPlayer) {
             PlayerScreen().environmentObject(router)
         }
