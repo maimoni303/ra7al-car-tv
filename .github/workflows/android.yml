@@ -75,5 +75,5 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: |
           cp "$GITHUB_WORKSPACE/android/app/build/outputs/apk/release/app-release.apk" /tmp/RA7AL-CarTV.apk
-          gh release view latest >/dev/null 2>&1 || gh release create latest --title "RA7AL Car TV — أحدث إصدار" --notes "آيفون وهواوي (أندرويد). اجتازت اختبار كل الصفحات قبل النشر." --target "$GITHUB_SHA"
+          gh release view latest >/dev/null 2>&1 || gh release create latest --title "RA7AL Car TV — أحدث إصدار" --notes "آيفون وهواوي (أندرويد). اجتازت اختبار كل الصفحات قبل النشر." --target "$GITHUB_SHA" || true
           gh release upload latest /tmp/RA7AL-CarTV.apk --clobber
