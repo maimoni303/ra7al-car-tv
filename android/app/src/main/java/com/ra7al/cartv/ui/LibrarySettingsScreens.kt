@@ -73,7 +73,7 @@ fun LibraryScreen() {
             listOf("library.videos", "library.favorites").forEachIndexed { i, k ->
                 SegmentedButton(selected = segment == i, onClick = { segment = i },
                     shape = SegmentedButtonDefaults.itemShape(i, 2), modifier = Modifier.testTag("segment-$i"),
-                    colors = SegmentedButtonDefaults.colors(activeContainerColor = Card, activeContentColor = MaterialTheme.colorScheme.onSurface),
+                    colors = SegmentedButtonDefaults.colors(activeContainerColor = BrandGreen.copy(alpha = 0.18f), activeContentColor = BrandGreen, activeBorderColor = BrandGreen.copy(alpha = 0.5f)),
                     icon = {}) { Text(L10n.t(k)) }
             }
         }
