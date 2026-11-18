@@ -21,7 +21,7 @@ final class ScreenTourTests: XCTestCase {
         app.buttons["sourceMenu"].tap()
         sleep(1)
         shot(app, "\(p)-02-source-menu")
-        app.tap(at: CGVector(dx: 0.1, dy: 0.95))   // dismiss menu
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.97)).tap()   // dismiss menu
         sleep(1)
 
         // Search
