@@ -203,7 +203,7 @@ fun PlayerScreen() {
             Spacer(Modifier.width(12.dp))
             Column(Modifier.weight(1f)) {
                 Text(c?.name.orEmpty(), color = Color.White, fontWeight = FontWeight.SemiBold, maxLines = 1)
-                if (!c?.group.isNullOrEmpty()) Text(c!!.group, color = Color.White.copy(alpha = 0.7f), fontSize = 13.sp, maxLines = 1)
+                if (!c?.group.isNullOrEmpty()) Text(c!!.group.split(';').map { it.trim() }.filter { it.isNotEmpty() }.joinToString(" · "), color = Color.White.copy(alpha = 0.7f), fontSize = 13.sp, maxLines = 1)
             }
             c?.let { ch ->
                 val fav = favs.contains(ch.key)

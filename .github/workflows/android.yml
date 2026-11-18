@@ -43,8 +43,9 @@ jobs:
           profile: pixel_7_pro
           disable-animations: true
           script: |
-            cd android && gradle --no-daemon connectedDebugAndroidTest || echo "TOUR_FAILED" > ../tour-failed
-            mkdir -p ../android-shots && adb pull /sdcard/Android/data/com.ra7al.cartv/files/shots ../android-shots/ || true
+            cd android && gradle --no-daemon connectedDebugAndroidTest || echo "TOUR_FAILED" > "$GITHUB_WORKSPACE/tour-failed"
+            adb shell ls /sdcard/Android/data/com.ra7al.cartv/files/shots || true
+            mkdir -p "$GITHUB_WORKSPACE/android-shots" && adb pull /sdcard/Android/data/com.ra7al.cartv/files/shots "$GITHUB_WORKSPACE/android-shots/" || true
 
       - name: Publish screenshots and test report
         if: always()

@@ -122,7 +122,7 @@ final class PlayerManager: ObservableObject {
         guard let c = current else { return }
         var info: [String: Any] = [
             MPMediaItemPropertyTitle: c.name,
-            MPMediaItemPropertyArtist: c.group.isEmpty ? "RA7AL Car TV" : c.group,
+            MPMediaItemPropertyArtist: c.group.isEmpty ? "RA7AL Car TV" : c.group.categoryDisplay,
             MPNowPlayingInfoPropertyIsLiveStream: true,
             MPNowPlayingInfoPropertyMediaType: MPNowPlayingInfoMediaType.video.rawValue
         ]

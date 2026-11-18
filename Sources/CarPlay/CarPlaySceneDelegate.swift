@@ -137,7 +137,7 @@ final class CarPlaySceneDelegate: UIResponder, CPTemplateApplicationSceneDelegat
     private func channelListTemplate(title: String, channels: [Channel]) -> CPListTemplate {
         let limit = CPListTemplate.maximumItemCount
         let items: [CPListItem] = channels.prefix(limit).map { ch in
-            let item = CPListItem(text: ch.name, detailText: ch.group.isEmpty ? nil : ch.group,
+            let item = CPListItem(text: ch.name, detailText: ch.group.isEmpty ? nil : ch.group.categoryDisplay,
                                   image: UIImage(systemName: "play.tv"))
             item.handler = { [weak self] _, completion in
                 PlayerManager.shared.play(ch, queue: channels)

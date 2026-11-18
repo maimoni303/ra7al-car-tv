@@ -45,7 +45,7 @@ struct PlayerScreen: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(player.current?.name ?? "").font(.headline).lineLimit(1)
                 if let g = player.current?.group, !g.isEmpty {
-                    Text(g).font(.caption).foregroundStyle(.white.opacity(0.7)).lineLimit(1)
+                    Text(g.categoryDisplay).font(.caption).foregroundStyle(.white.opacity(0.7)).lineLimit(1)
                 }
             }
             Spacer()

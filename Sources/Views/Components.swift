@@ -203,13 +203,13 @@ struct SettingsRow: View {
         HStack(spacing: 16) {
             Image(systemName: icon).font(.system(size: 22)).foregroundStyle(Brand.accent).frame(width: 32)
             VStack(alignment: .leading, spacing: 2) {
-                Text(title).font(.system(size: 19)).foregroundStyle(.primary)
+                Text(title).font(.system(size: 19)).foregroundStyle(Color.primary)
                 if let subtitle {
-                    Text(subtitle).font(.system(size: 15)).foregroundStyle(.secondary).lineLimit(1)
+                    Text(subtitle).font(.system(size: 15)).foregroundStyle(Color.secondary).lineLimit(1)
                 }
             }
             Spacer()
-            if let value { Text(value).foregroundStyle(.secondary) }
+            if let value { Text(value).foregroundStyle(Color.secondary) }
             if showsChevron {
                 Image(systemName: "chevron.forward").font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(Color(.tertiaryLabel))
@@ -246,5 +246,12 @@ extension Int {
         f.numberStyle = .decimal
         f.locale = Locale(identifier: L10n.current == "ar" ? "ar_SA@numbers=latn" : "en_US")
         return f.string(from: NSNumber(value: self)) ?? "\(self)"
+    }
+}
+
+extension String {
+    /// "Movies;Entertainment" → "Movies · Entertainment"
+    var categoryDisplay: String {
+        split(separator: ";").map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }.joined(separator: " · ")
     }
 }
