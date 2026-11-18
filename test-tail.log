@@ -1,0 +1,300 @@
+    t =   158.15s     Synthesize event
+    t =   158.16s         Find the "البحث عن روابط IPTV" StaticText
+    t =   158.56s         Find the "البحث عن روابط IPTV" StaticText
+    t =   158.83s         Find the "البحث عن روابط IPTV" StaticText
+    t =   159.38s     Wait for com.ra7al.cartv to idle
+    t =   161.95s Find the Target Application 'com.ra7al.cartv'
+    t =   162.51s Added attachment named 'ar-dark-14-find-links'
+    t =   162.52s Swipe up Target Application 'com.ra7al.cartv'
+    t =   162.52s     Wait for com.ra7al.cartv to idle
+    t =   162.53s     Find the Target Application 'com.ra7al.cartv'
+    t =   162.81s     Check for interrupting elements affecting "Car TV" Application
+    t =   163.12s     Synthesize event
+    t =   163.56s     Wait for com.ra7al.cartv to idle
+    t =   166.31s Find the Target Application 'com.ra7al.cartv'
+    t =   167.21s Added attachment named 'ar-dark-15-find-links-scrolled'
+    t =   167.22s Tear Down
+Test Case '-[RA7ALCarTVUITests.ScreenTourTests testTourArabicDark]' passed (167.706 seconds).
+Test Case '-[RA7ALCarTVUITests.ScreenTourTests testTourEnglishLight]' started.
+    t =     0.00s Start Test at 2026-11-18 20:12:01.594
+    t =     0.26s Set Up
+    t =     0.27s Open com.ra7al.cartv
+    t =     0.27s     Launch com.ra7al.cartv
+    t =     0.27s         Terminate com.ra7al.cartv:5843
+    t =     3.87s         Setting up automation session
+    t =     8.78s         Wait for com.ra7al.cartv to idle
+    t =    13.29s Waiting 15.0s for "channel-Top Gear (720p)" Button to exist
+    t =    14.35s     Checking `Expect predicate `existsNoRetry == 1` for object "channel-Top Gear (720p)" Button`
+    t =    14.35s         Checking existence of `"channel-Top Gear (720p)" Button`
+    t =    15.05s Find the Target Application 'com.ra7al.cartv'
+    t =    15.54s Added attachment named 'en-light-01-home'
+    t =    15.55s Waiting 5.0s for "sourceMenu" Button to exist
+    t =    16.56s     Checking `Expect predicate `existsNoRetry == 1` for object "sourceMenu" Button`
+    t =    16.57s         Checking existence of `"sourceMenu" Button`
+    t =    16.83s Tap "sourceMenu" Button[0.50, 0.50]
+    t =    16.83s     Wait for com.ra7al.cartv to idle
+    t =    16.84s     Find the "sourceMenu" Button
+    t =    17.14s     Check for interrupting elements affecting "sourceMenu" Button
+    t =    17.36s     Synthesize event
+    t =    17.36s         Find the "sourceMenu" Button
+    t =    17.64s         Find the "sourceMenu" Button
+    t =    17.89s         Find the "sourceMenu" Button
+    t =    18.44s     Wait for com.ra7al.cartv to idle
+    t =    21.04s Find the Target Application 'com.ra7al.cartv'
+    t =    21.79s Added attachment named 'en-light-02-source-menu'
+    t =    21.79s Tap Target Application 'com.ra7al.cartv'[0.10, 0.97]
+    t =    21.79s     Wait for com.ra7al.cartv to idle
+    t =    21.79s     Find the Target Application 'com.ra7al.cartv'
+    t =    22.07s     Check for interrupting elements affecting "Car TV" Application
+    t =    22.26s     Synthesize event
+    t =    22.27s         Find the Target Application 'com.ra7al.cartv'
+    t =    22.43s         Find the Target Application 'com.ra7al.cartv'
+    t =    22.61s         Find the Target Application 'com.ra7al.cartv'
+    t =    23.21s     Wait for com.ra7al.cartv to idle
+    t =    25.39s Waiting 5.0s for TextField (First Match) to exist
+    t =    26.42s     Checking `Expect predicate `existsNoRetry == 1` for object TextField (First Match)`
+    t =    26.42s         Checking existence of `TextField (First Match)`
+    t =    26.66s Tap TextField (First Match)[0.50, 0.50]
+    t =    26.66s     Wait for com.ra7al.cartv to idle
+    t =    26.66s     Find the TextField (First Match)
+    t =    26.92s     Check for interrupting elements affecting "Search channels" TextField
+    t =    27.07s     Synthesize event
+    t =    27.07s         Find the "Search channels" TextField
+    t =    27.28s         Find the "Search channels" TextField
+    t =    27.63s         Find the "Search channels" TextField
+    t =    28.23s     Wait for com.ra7al.cartv to idle
+    t =    29.62s Type 'Sports
+' into "Search channels" TextField
+    t =    29.62s     Wait for com.ra7al.cartv to idle
+    t =    29.78s     Find the "Search channels" TextField
+    t =    30.63s     Check for interrupting elements affecting "Search channels" TextField
+    t =    30.89s     Synthesize event
+    t =    31.24s     Wait for com.ra7al.cartv to idle
+    t =    32.00s Waiting 5.0s for "channel-Sports One" Button to exist
+    t =    33.04s     Checking `Expect predicate `existsNoRetry == 1` for object "channel-Sports One" Button`
+    t =    33.05s         Checking existence of `"channel-Sports One" Button`
+    t =    33.28s Find the Target Application 'com.ra7al.cartv'
+    t =    33.69s Added attachment named 'en-light-03-search'
+    t =    33.69s Waiting 5.0s for "Clear" Button to exist
+    t =    34.72s     Checking `Expect predicate `existsNoRetry == 1` for object "Clear" Button`
+    t =    34.72s         Checking existence of `"Clear" Button`
+    t =    34.94s Tap "Clear" Button[0.50, 0.50]
+    t =    34.94s     Wait for com.ra7al.cartv to idle
+    t =    34.96s     Find the "Clear" Button
+    t =    35.26s     Check for interrupting elements affecting "xmark.circle.fill" Button
+    t =    35.54s     Synthesize event
+    t =    35.55s         Find the "xmark.circle.fill" Button
+    t =    35.77s         Find the "xmark.circle.fill" Button
+    t =    36.09s         Find the "xmark.circle.fill" Button
+    t =    36.63s     Wait for com.ra7al.cartv to idle
+    t =    37.65s Waiting 5.0s for "channel-Top Gear (720p)" Button to exist
+    t =    38.69s     Checking `Expect predicate `existsNoRetry == 1` for object "channel-Top Gear (720p)" Button`
+    t =    38.69s         Checking existence of `"channel-Top Gear (720p)" Button`
+    t =    39.26s Tap "channel-Top Gear (720p)" Button[0.50, 0.50]
+    t =    39.26s     Wait for com.ra7al.cartv to idle
+    t =    39.26s     Find the "channel-Top Gear (720p)" Button
+    t =    40.08s     Check for interrupting elements affecting "channel-Top Gear (720p)" Button
+    t =    40.27s     Synthesize event
+    t =    40.28s         Find the "channel-Top Gear (720p)" Button
+    t =    41.15s         Find the "channel-Top Gear (720p)" Button
+    t =    42.17s         Find the "channel-Top Gear (720p)" Button
+    t =    43.51s     Wait for com.ra7al.cartv to idle
+    t =    48.60s Find the Target Application 'com.ra7al.cartv'
+    t =    49.17s Added attachment named 'en-light-04-player'
+    t =    49.18s Waiting 5.0s for "Close" Button to exist
+    t =    50.23s     Checking `Expect predicate `existsNoRetry == 1` for object "Close" Button`
+    t =    50.23s         Checking existence of `"Close" Button`
+    t =    50.26s Tap "Close" Button[0.50, 0.50]
+    t =    50.26s     Wait for com.ra7al.cartv to idle
+    t =    50.27s     Find the "Close" Button
+    t =    50.29s     Check for interrupting elements affecting "chevron.down" Button
+    t =    50.55s     Synthesize event
+    t =    50.56s         Find the "chevron.down" Button
+    t =    50.67s         Find the "chevron.down" Button
+    t =    50.79s         Find the "chevron.down" Button
+    t =    51.29s     Wait for com.ra7al.cartv to idle
+    t =    52.73s Find the Target Application 'com.ra7al.cartv'
+    t =    53.19s Added attachment named 'en-light-05-mini-player'
+    t =    53.19s Waiting 5.0s for "tab-1" Button to exist
+    t =    54.23s     Checking `Expect predicate `existsNoRetry == 1` for object "tab-1" Button`
+    t =    54.23s         Checking existence of `"tab-1" Button`
+    t =    54.46s Tap "tab-1" Button[0.50, 0.50]
+    t =    54.46s     Wait for com.ra7al.cartv to idle
+    t =    54.46s     Find the "tab-1" Button
+    t =    54.90s     Check for interrupting elements affecting "tab-1" Button
+    t =    55.14s     Synthesize event
+    t =    55.14s         Find the "tab-1" Button
+    t =    55.41s         Find the "tab-1" Button
+    t =    55.77s         Find the "tab-1" Button
+    t =    56.32s     Wait for com.ra7al.cartv to idle
+    t =    57.35s Waiting 5.0s for "Popular Sites" StaticText to exist
+    t =    58.39s     Checking `Expect predicate `existsNoRetry == 1` for object "Popular Sites" StaticText`
+    t =    58.40s         Checking existence of `"Popular Sites" StaticText`
+    t =    59.01s Find the Target Application 'com.ra7al.cartv'
+    t =    59.66s Added attachment named 'en-light-06-browser'
+    t =    59.67s Waiting 5.0s for "tab-2" Button to exist
+    t =    60.70s     Checking `Expect predicate `existsNoRetry == 1` for object "tab-2" Button`
+    t =    60.71s         Checking existence of `"tab-2" Button`
+    t =    60.98s Tap "tab-2" Button[0.50, 0.50]
+    t =    60.98s     Wait for com.ra7al.cartv to idle
+    t =    60.99s     Find the "tab-2" Button
+    t =    61.24s     Check for interrupting elements affecting "tab-2" Button
+    t =    61.42s     Synthesize event
+    t =    61.42s         Find the "tab-2" Button
+    t =    61.70s         Find the "tab-2" Button
+    t =    61.96s         Find the "tab-2" Button
+    t =    62.43s     Wait for com.ra7al.cartv to idle
+    t =    63.45s Waiting 5.0s for "CarPlay not connected" StaticText to exist
+    t =    64.49s     Checking `Expect predicate `existsNoRetry == 1` for object "CarPlay not connected" StaticText`
+    t =    64.49s         Checking existence of `"CarPlay not connected" StaticText`
+    t =    64.74s Find the Target Application 'com.ra7al.cartv'
+    t =    65.16s Added attachment named 'en-light-07-cast'
+    t =    65.17s Waiting 5.0s for "tab-3" Button to exist
+    t =    66.21s     Checking `Expect predicate `existsNoRetry == 1` for object "tab-3" Button`
+    t =    66.21s         Checking existence of `"tab-3" Button`
+    t =    66.42s Tap "tab-3" Button[0.50, 0.50]
+    t =    66.42s     Wait for com.ra7al.cartv to idle
+    t =    66.42s     Find the "tab-3" Button
+    t =    66.61s     Check for interrupting elements affecting "tab-3" Button
+    t =    66.80s     Synthesize event
+    t =    66.80s         Find the "tab-3" Button
+    t =    66.96s         Find the "tab-3" Button
+    t =    67.16s         Find the "tab-3" Button
+    t =    67.68s     Wait for com.ra7al.cartv to idle
+    t =    68.70s Waiting 5.0s for "No videos imported" StaticText to exist
+    t =    69.74s     Checking `Expect predicate `existsNoRetry == 1` for object "No videos imported" StaticText`
+    t =    69.74s         Checking existence of `"No videos imported" StaticText`
+    t =    70.08s Find the Target Application 'com.ra7al.cartv'
+    t =    70.56s Added attachment named 'en-light-08-library'
+    t =    70.57s Waiting 5.0s for Button (Element at index 1) to exist
+    t =    71.59s     Checking `Expect predicate `existsNoRetry == 1` for object Button (Element at index 1)`
+    t =    71.60s         Checking existence of `Button (Element at index 1)`
+    t =    71.84s Tap Button (Element at index 1)[0.50, 0.50]
+    t =    71.85s     Wait for com.ra7al.cartv to idle
+    t =    71.85s     Find the Button (Element at index 1)
+    t =    72.04s     Check for interrupting elements affecting "Favorites" Button
+    t =    72.27s     Synthesize event
+    t =    72.29s         Find the "Favorites" Button
+    t =    72.48s         Find the "Favorites" Button
+    t =    72.68s         Find the "Favorites" Button
+    t =    73.11s     Wait for com.ra7al.cartv to idle
+    t =    75.55s Find the Target Application 'com.ra7al.cartv'
+    t =    75.92s Added attachment named 'en-light-09-library-favorites'
+    t =    75.92s Waiting 5.0s for "tab-4" Button to exist
+    t =    76.95s     Checking `Expect predicate `existsNoRetry == 1` for object "tab-4" Button`
+    t =    76.95s         Checking existence of `"tab-4" Button`
+    t =    77.19s Tap "tab-4" Button[0.50, 0.50]
+    t =    77.19s     Wait for com.ra7al.cartv to idle
+    t =    77.20s     Find the "tab-4" Button
+    t =    77.43s     Check for interrupting elements affecting "tab-4" Button
+    t =    77.64s     Synthesize event
+    t =    77.64s         Find the "tab-4" Button
+    t =    77.81s         Find the "tab-4" Button
+    t =    77.96s         Find the "tab-4" Button
+    t =    78.46s     Wait for com.ra7al.cartv to idle
+    t =    79.50s Waiting 5.0s for "Manage Sources" StaticText to exist
+    t =    80.55s     Checking `Expect predicate `existsNoRetry == 1` for object "Manage Sources" StaticText`
+    t =    80.55s         Checking existence of `"Manage Sources" StaticText`
+    t =    80.78s Find the Target Application 'com.ra7al.cartv'
+    t =    81.12s Added attachment named 'en-light-10-settings'
+    t =    81.12s Waiting 5.0s for "Manage Sources" StaticText to exist
+    t =    82.15s     Checking `Expect predicate `existsNoRetry == 1` for object "Manage Sources" StaticText`
+    t =    82.15s         Checking existence of `"Manage Sources" StaticText`
+    t =    82.40s Tap "Manage Sources" StaticText[0.50, 0.50]
+    t =    82.40s     Wait for com.ra7al.cartv to idle
+    t =    82.40s     Find the "Manage Sources" StaticText
+    t =    82.57s     Check for interrupting elements affecting "Manage Sources" StaticText
+    t =    82.72s     Synthesize event
+    t =    82.72s         Find the "Manage Sources" StaticText
+    t =    82.94s         Find the "Manage Sources" StaticText
+    t =    83.13s         Find the "Manage Sources" StaticText
+    t =    83.68s     Wait for com.ra7al.cartv to idle
+    t =    83.89s Waiting 5.0s for "demo" StaticText to exist
+    t =    84.93s     Checking `Expect predicate `existsNoRetry == 1` for object "demo" StaticText`
+    t =    84.94s         Checking existence of `"demo" StaticText`
+    t =    85.28s Find the Target Application 'com.ra7al.cartv'
+    t =    85.70s Added attachment named 'en-light-11-manage-sources'
+    t =    85.71s Waiting 5.0s for "demo" StaticText to exist
+    t =    86.72s     Checking `Expect predicate `existsNoRetry == 1` for object "demo" StaticText`
+    t =    86.72s         Checking existence of `"demo" StaticText`
+    t =    86.95s Tap "demo" StaticText[0.50, 0.50]
+    t =    86.95s     Wait for com.ra7al.cartv to idle
+    t =    86.95s     Find the "demo" StaticText
+    t =    87.14s     Check for interrupting elements affecting "demo" StaticText
+    t =    87.31s     Synthesize event
+    t =    87.31s         Find the "demo" StaticText
+    t =    87.61s         Find the "demo" StaticText
+    t =    87.81s         Find the "demo" StaticText
+    t =    88.32s     Wait for com.ra7al.cartv to idle
+    t =    89.46s Find the Target Application 'com.ra7al.cartv'
+    t =    89.88s Added attachment named 'en-light-12-source-detail'
+    t =    89.88s Waiting 5.0s for Button (Element at index 0) to exist
+    t =    90.92s     Checking `Expect predicate `existsNoRetry == 1` for object Button (Element at index 0)`
+    t =    90.92s         Checking existence of `Button (Element at index 0)`
+    t =    91.04s Tap Button (Element at index 0)[0.50, 0.50]
+    t =    91.05s     Wait for com.ra7al.cartv to idle
+    t =    91.05s     Find the Button (Element at index 0)
+    t =    91.17s     Check for interrupting elements affecting "BackButton" Button
+    t =    91.30s     Synthesize event
+    t =    91.30s         Find the "BackButton" Button
+    t =    91.42s         Find the "BackButton" Button
+    t =    91.59s         Find the "BackButton" Button
+    t =    92.01s     Wait for com.ra7al.cartv to idle
+    t =    93.89s Get number of matches for: Descendants matching type Button
+    t =    94.00s Waiting 5.0s for Button (Element at index 1) to exist
+    t =    95.05s     Checking `Expect predicate `existsNoRetry == 1` for object Button (Element at index 1)`
+    t =    95.05s         Checking existence of `Button (Element at index 1)`
+    t =    95.17s Tap Button (Element at index 1)[0.50, 0.50]
+    t =    95.17s     Wait for com.ra7al.cartv to idle
+    t =    95.18s     Find the Button (Element at index 1)
+    t =    95.34s     Check for interrupting elements affecting "plus" Button
+    t =    95.47s     Synthesize event
+    t =    95.47s         Find the "plus" Button
+    t =    95.59s         Find the "plus" Button
+    t =    95.72s         Find the "plus" Button
+    t =    96.13s     Wait for com.ra7al.cartv to idle
+    t =    97.71s Waiting 5.0s for "Add a Source" StaticText to exist
+    t =    98.72s     Checking `Expect predicate `existsNoRetry == 1` for object "Add a Source" StaticText`
+    t =    98.72s         Checking existence of `"Add a Source" StaticText`
+    t =   100.31s Find the Target Application 'com.ra7al.cartv'
+    t =   100.95s Added attachment named 'en-light-13-add-source'
+    t =   100.95s Waiting 5.0s for "Find IPTV Links" StaticText to exist
+    t =   102.01s     Checking `Expect predicate `existsNoRetry == 1` for object "Find IPTV Links" StaticText`
+    t =   102.01s         Checking existence of `"Find IPTV Links" StaticText`
+    t =   102.34s Tap "Find IPTV Links" StaticText[0.50, 0.50]
+    t =   102.34s     Wait for com.ra7al.cartv to idle
+    t =   102.34s     Find the "Find IPTV Links" StaticText
+    t =   102.62s     Check for interrupting elements affecting "Find IPTV Links" StaticText
+    t =   102.85s     Synthesize event
+    t =   102.86s         Find the "Find IPTV Links" StaticText
+    t =   103.12s         Find the "Find IPTV Links" StaticText
+    t =   103.39s         Find the "Find IPTV Links" StaticText
+    t =   103.98s     Wait for com.ra7al.cartv to idle
+    t =   106.49s Find the Target Application 'com.ra7al.cartv'
+    t =   106.99s Added attachment named 'en-light-14-find-links'
+    t =   107.00s Swipe up Target Application 'com.ra7al.cartv'
+    t =   107.00s     Wait for com.ra7al.cartv to idle
+    t =   107.00s     Find the Target Application 'com.ra7al.cartv'
+    t =   107.19s     Check for interrupting elements affecting "Car TV" Application
+    t =   107.39s     Synthesize event
+    t =   107.82s     Wait for com.ra7al.cartv to idle
+    t =   110.44s Find the Target Application 'com.ra7al.cartv'
+    t =   111.64s Added attachment named 'en-light-15-find-links-scrolled'
+    t =   111.66s Tear Down
+Test Case '-[RA7ALCarTVUITests.ScreenTourTests testTourEnglishLight]' passed (112.112 seconds).
+Test Suite 'ScreenTourTests' passed at 2026-11-18 20:13:53.707.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 279.818 (279.832) seconds
+Test Suite 'RA7ALCarTVUITests.xctest' passed at 2026-11-18 20:13:53.711.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 279.818 (279.836) seconds
+Test Suite 'All tests' passed at 2026-11-18 20:13:53.711.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 279.818 (279.838) seconds
+2026-11-18 20:13:57.566 xcodebuild[1459:7582] [MT] IDETestOperationsObserverDebug: 562.676 elapsed -- Testing started completed.
+2026-11-18 20:13:57.582 xcodebuild[1459:7582] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-18 20:13:57.582 xcodebuild[1459:7582] [MT] IDETestOperationsObserverDebug: 562.676 sec, +562.676 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/Library/Developer/Xcode/DerivedData/RA7ALCarTV-eywhmkaimelsehgikdnqasmpedmn/Logs/Test/Test-RA7ALCarTV-2026.11.18_20-03-54-+0000.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
