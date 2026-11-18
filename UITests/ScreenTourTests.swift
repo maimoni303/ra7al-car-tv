@@ -18,7 +18,7 @@ final class ScreenTourTests: XCTestCase {
         shot(app, "\(p)-01-home")
 
         // Source menu
-        app.buttons["sourceMenu"].tap()
+        tap(app.buttons["sourceMenu"])
         sleep(1)
         shot(app, "\(p)-02-source-menu")
         app.coordinate(withNormalizedOffset: CGVector(dx: 0.1, dy: 0.97)).tap()   // dismiss menu
@@ -26,18 +26,18 @@ final class ScreenTourTests: XCTestCase {
 
         // Search
         let search = app.textFields.firstMatch
-        search.tap()
+        tap(search)
         search.typeText("Sports\n")
         XCTAssertTrue(app.buttons["channel-Sports One"].waitForExistence(timeout: 5), "Search finds channel")
         shot(app, "\(p)-03-search")
-        app.buttons.matching(identifier: lang == "ar" ? "مسح" : "Clear").firstMatch.tap()
+        tap(app.buttons.matching(identifier: lang == "ar" ? "مسح" : "Clear").firstMatch)
         sleep(1)
 
         // Open player
-        app.buttons["channel-Top Gear (720p)"].firstMatch.tap()
+        tap(app.buttons["channel-Top Gear (720p)"].firstMatch)
         sleep(4)
         shot(app, "\(p)-04-player")
-        app.buttons[lang == "ar" ? "إغلاق" : "Close"].firstMatch.tap()
+        tap(app.buttons[lang == "ar" ? "إغلاق" : "Close"].firstMatch)
         sleep(1)
         shot(app, "\(p)-05-mini-player")
 
@@ -55,7 +55,7 @@ final class ScreenTourTests: XCTestCase {
         tab(app, 3)
         XCTAssertTrue(app.staticTexts[lang == "ar" ? "لا توجد فيديوهات مستوردة" : "No videos imported"].waitForExistence(timeout: 5))
         shot(app, "\(p)-08-library")
-        app.segmentedControls.buttons.element(boundBy: 1).tap()
+        tap(app.segmentedControls.buttons.element(boundBy: 1))
         sleep(1)
         shot(app, "\(p)-09-library-favorites")
 
@@ -65,21 +65,21 @@ final class ScreenTourTests: XCTestCase {
         shot(app, "\(p)-10-settings")
 
         // Manage sources → detail
-        app.staticTexts[lang == "ar" ? "إدارة المصادر" : "Manage Sources"].tap()
+        tap(app.staticTexts[lang == "ar" ? "إدارة المصادر" : "Manage Sources"])
         XCTAssertTrue(app.staticTexts["demo"].waitForExistence(timeout: 5))
         shot(app, "\(p)-11-manage-sources")
-        app.staticTexts["demo"].tap()
+        tap(app.staticTexts["demo"])
         sleep(1)
         shot(app, "\(p)-12-source-detail")
-        app.navigationBars.buttons.element(boundBy: 0).tap()
+        tap(app.navigationBars.buttons.element(boundBy: 0))
         sleep(1)
 
         // Add a Source → Find IPTV Links
-        app.navigationBars.buttons.element(boundBy: app.navigationBars.buttons.count - 1).tap()
+        tap(app.navigationBars.buttons.element(boundBy: app.navigationBars.buttons.count - 1))
         XCTAssertTrue(app.staticTexts[lang == "ar" ? "إضافة مصدر" : "Add a Source"].waitForExistence(timeout: 5))
         sleep(1)
         shot(app, "\(p)-13-add-source")
-        app.staticTexts[lang == "ar" ? "البحث عن روابط IPTV" : "Find IPTV Links"].tap()
+        tap(app.staticTexts[lang == "ar" ? "البحث عن روابط IPTV" : "Find IPTV Links"])
         sleep(2)
         shot(app, "\(p)-14-find-links")
         app.swipeUp()
@@ -87,13 +87,14 @@ final class ScreenTourTests: XCTestCase {
     }
 
     private func tab(_ app: XCUIApplication, _ index: Int) {
-        app.buttons["tab-\(index)"].tap()
+        tap(app.buttons["tab-\(index)"])
         sleep(1)
     }
 
-    private func dismissKeyboard(_ app: XCUIApplication) {
-        if app.keyboards.count > 0 { app.keyboards.buttons.element(boundBy: app.keyboards.buttons.count - 1).tap() }
-        sleep(1)
+    /// Taps the centre of an element by coordinate (works for toolbar items and custom controls).
+    private func tap(_ e: XCUIElement) {
+        _ = e.waitForExistence(timeout: 5)
+        e.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
     }
 
     private func shot(_ app: XCUIApplication, _ name: String) {
