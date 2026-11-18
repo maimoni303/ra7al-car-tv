@@ -33,8 +33,11 @@ jobs:
           TEST_RUNNER_SCREENSHOT_DIR: ${{ github.workspace }}/screenshots
         run: |
           set -o pipefail
+          SIM=$(xcrun simctl list devices available | grep -E "^\s+iPhone" | grep -E "Pro Max" | head -1 | sed -E 's/^ +//; s/ \(.*//')
+          [ -z "$SIM" ] && SIM=$(xcrun simctl list devices available | grep -E "^\s+iPhone" | head -1 | sed -E 's/^ +//; s/ \(.*//')
+          echo "Using simulator: $SIM"
           xcodebuild test -project RA7ALCarTV.xcodeproj -scheme RA7ALCarTV \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro Max' \
+            -destination "platform=iOS Simulator,name=$SIM" \
             CODE_SIGNING_ALLOWED=NO 2>&1 | tee test.log | xcbeautify
 
       - name: Upload screenshots and test log
